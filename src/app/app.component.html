@@ -1,0 +1,8 @@
+  <div>
+    <a routerLink="home">Home</a>
+    <a routerLink="restricted" *ngIf="isLoggedIn()">Restricted Page</a>
+    <button (click)="logIn()" *ngIf="!isLoggedIn()">Login</button>
+    <button (click)="logOff()" *ngIf="isLoggedIn()">Logout</button>
+  </div>
+
+<router-outlet></router-outlet>
